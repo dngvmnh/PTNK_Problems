@@ -67,7 +67,7 @@ def merge_sort(arr):
             k += 1
 
 def quick_sort(arr):
-    
+
     def partition(arr, low, high):
         pivot = arr[low]  
         i = low + 1
@@ -122,6 +122,72 @@ def heap_sort(arr):
 
     return arr
 
+def counting_sort(arr):
+    max_val = max(arr)
+    min_val = min(arr)
+
+    count = [0] * (max_val - min_val + 1)
+
+    for num in arr:
+        count[num - min_val] += 1
+
+    sorted_arr = []
+    for i in range(len(count)):
+        while count[i] > 0:
+            sorted_arr.append(i + min_val)
+            count[i] -= 1
+
+    return sorted_arr
+
+def radix_sort(arr):
+    max_val = max(arr)
+    exp = 1
+
+    while max_val // exp > 0:
+        n = len(arr)
+        output = [0] * n
+        count = [0] * 10
+
+        for i in range(n):
+            index = (arr[i] // exp) % 10
+            count[index] += 1
+
+        for i in range(1, 10):
+            count[i] += count[i - 1]
+
+        i = n - 1
+        while i >= 0:
+            index = (arr[i] // exp) % 10
+            output[count[index] - 1] = arr[i]
+            count[index] -= 1
+            i -= 1
+
+        for i in range(n):
+            arr[i] = output[i]
+
+        exp *= 10
+
+def bucket_sort(x):
+    arr = []
+    slot_num = 10  
+
+    for i in range(slot_num):
+        arr.append([])
+ 
+    for j in x:
+        index_b = int(slot_num * j)
+        arr[index_b].append(j)
+ 
+    for i in range(slot_num):
+        arr[i] = bubble_sort(arr[i])
+ 
+    k = 0
+    for i in range(slot_num):
+        for j in range(len(arr[i])):
+            x[k] = arr[i][j]
+            k += 1
+    return x
+ 
 
 
 
@@ -133,8 +199,10 @@ if __name__ == '__main__' :
     # selection_sort(arr)
     # insertion_sort(arr)
     # merge_sort(arr)
-    quick_sort(arr)
+    # quick_sort(arr)
     # heap_sort(arr)
+    # radix_sort(arr)
+    bucket_sort(arr)
 
 
 
