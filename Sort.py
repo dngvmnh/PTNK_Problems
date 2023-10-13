@@ -167,44 +167,12 @@ def radix_sort(arr):
 
         exp *= 10
 
-def bucket_sort(x):
-    arr = []
-    slot_num = 10  
-
-    for i in range(slot_num):
-        arr.append([])
- 
-    for j in x:
-        index_b = int(slot_num * j)
-        arr[index_b].append(j)
- 
-    for i in range(slot_num):
-        arr[i] = bubble_sort(arr[i])
- 
-    k = 0
-    for i in range(slot_num):
-        for j in range(len(arr[i])):
-            x[k] = arr[i][j]
-            k += 1
-    return x
- 
-
-
-
-
-
-
 if __name__ == '__main__' : 
-    # bubble_sort(arr)
-    # selection_sort(arr)
-    # insertion_sort(arr)
-    # merge_sort(arr)
-    # quick_sort(arr)
-    # heap_sort(arr)
-    # radix_sort(arr)
-    bucket_sort(arr)
-
-
-
-
+    bubble_sort(arr)
+    selection_sort(arr)
+    insertion_sort(arr)
+    merge_sort(arr)
+    quick_sort(arr)
+    heap_sort(arr)
+    radix_sort(arr)
     print(arr)
