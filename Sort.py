@@ -166,13 +166,3 @@ def radix_sort(arr):
             arr[i] = output[i]
 
         exp *= 10
-
-if __name__ == '__main__' : 
-    bubble_sort(arr)
-    selection_sort(arr)
-    insertion_sort(arr)
-    merge_sort(arr)
-    quick_sort(arr)
-    heap_sort(arr)
-    radix_sort(arr)
-    print(arr)

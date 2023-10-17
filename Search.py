@@ -113,16 +113,3 @@ def fibonacci_search(arr, target):
 
     return -1
 
-if __name__ == '__main__' : 
-
-    result = linear_search(arr, target)
-    result = sentinel_linear_search(arr, target)
-    result = binary_search(arr, target)
-    result = ternary_search(arr, 0, len(arr) - 1, target)
-    result = interpolation_search(arr, target)     
-    result = fibonacci_search(arr, target) 
-   
-    if result != -1:
-        print(f"Element {target} found at index {result}.")
-    else:
-        print(f"Element {target} not found in the array.")
