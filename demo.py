@@ -32,13 +32,16 @@ def sll() :
     e_list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     target = random.randint(1,20)
     sll_list = SLL(e_list)
-    current_node = sll_list.compare(target)
-    if current_node :
-        sll_list.insert_after(current_node, "HELLO")
+    # current_node = sll_list.compare(target)
+    # if current_node :
+    #     sll_list.insert_after(current_node, "HELLO")
 
-    sll_list.sll_append("Vu")
-    sll_list.sll_append("Minh")
-    sll_list.sll_append("Dang")
+    # sll_list.sll_append("Vu")
+    # sll_list.sll_append("Minh")
+    # sll_list.sll_append("Dang")
+    sll_list.print_list()
+
+    sll_list.bubble_sort()
 
     sll_list.print_list()
 
@@ -70,5 +73,5 @@ if __name__ == '__main__' :
     target = 7
     # sort_search(arr, target)
 
-    # sll()
+    sll()
     # dll()
