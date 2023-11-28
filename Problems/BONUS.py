@@ -33,7 +33,7 @@ def caub():
             print(".", end = "")
         print("*", end = "")
         print("\n")
-    print("*"*b)
+    print("*"*b+"\n")
 def cauc():
     a = int(input("so hang: "))
     b = int(input("so cot: "))
