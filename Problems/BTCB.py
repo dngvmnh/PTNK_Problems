@@ -276,6 +276,113 @@ def cau33(a,b):
         if isinstance(i**(1/2)):
             print(i, end=" ")
 
+def cau34(n):
+    sum = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            sum += i
+    print(sum)
+
+def cau35(n):
+    pro = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            pro *= i
+    print(pro)
+
+def cau36(n):
+    count = 0
+    div = []
+    for i in range(1, n + 1):
+        if n % i == 0:
+            count += 1
+            div.append(i)
+    print(count)
+    for i in div:
+        print(i, end=" ")
+
+def cau37(n):
+    count = 0
+    div = []
+    for i in range(1, n + 1):
+        if n % i == 0 & i%2==1:
+            count += 1
+            div.append(i)
+    print(count)
+    for i in div:
+        print(i, end=" ")
+
+def cau38(n):
+    count = 0
+    div = []
+    for i in range(1, n + 1):
+        if n % i == 0 & i%2==0:
+            count += 1
+            div.append(i)
+    print(count)
+    for i in div:
+        print(i, end=" ")
+
+def cau39(n):
+    count = 0
+    pro=1
+    for i in range(1, n + 1):
+        if n % i == 0 & i%2==1:
+            count += 1
+            pro*=i
+    print(count)
+    print(pro)
+
+def cau40(n):
+    count = 0
+    div = []
+    for i in range(1, n + 1):
+        if n % i == 0 & i%2==0:
+            count += 1
+            div.append(i)
+    print(count)
+    for i in div:
+        print(i, end=" ")
+
+def cau41(n):
+    max = 1
+    for i in range(1, n + 1):
+        if n % i == 0 and i % 2 != 0 and i > max:
+            max = i
+    print(max)
+
+def cau42(n):
+    max=0
+    for x in range(n-1, 1, -1):
+        if n % x == 0:
+            max=x
+    if max==n or max==1:
+        return -1
+    else:
+        print(max)
+
+def cau43(a, b):
+    for x in range(a, b + 1):
+        if x % 2 == 0:
+            print(x, end=" ")
+
+def cau44(a,b,c):
+    for x in range(a, b + 1):
+        if c % x == 0:
+            print(x, end=" ")
+
+def cau45(a,b,c):
+    for x in range(a, b + 1):
+        if c % x == 0 and x%2==0:
+            print(x, end=" ")
+
+def cau46(a,b,c):
+    count=0
+    for x in range(a, b + 1):
+        if c % x == 0 and x%2==0:
+            count+=1
+    print(count)
+
 if __name__=="__main__":
     var=int(input())
     var_1=int(input())
@@ -312,3 +419,18 @@ if __name__=="__main__":
     # cau31(var,var_1)
     # cau32(var,var_1)
     # cau33(var,var_1)
+    # cau34(var)
+    # cau35(var)
+    # cau36(var)
+    # cau37(var)
+    # cau38(var)
+    # cau39(var)
+    # cau40(var)
+    # cau41(var)
+    # cau42(var)
+    # cau43(var, var_1)
+    # cau44(var, var_1, var_2)
+    # cau45(var, var_1, var_2)
+    # cau46(var, var_1, var_2)
+
+
