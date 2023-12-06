@@ -1,25 +1,25 @@
 def cau1(a,b,c):
     if ((a < b + c) & (b < c + a) & (c < a + b)):
-        print("Day la ba canh cua tam giac", end = " ")
+        print("Day la ba canh cua tam giac")
         if (a**2 == b**2 + c**2)|(b**2 == c**2 + a**2)|(c**2 == a**2 + b**2):
             if (a == b)|(b == c)|(c==a):
-                print ("vuong can ")
+                print ("Day la ba canh cua tam giac vuong can ")
             else:
-                print ("vuong ")
+                print ("Day la ba canh cua tam giac vuong ")
         elif (a == b)|(b == c)|(c==a):
             if (a == b)&(b == c):
-                print ("deu ")
+                print ("Day la ba canh cua tam giac deu ")
             else:
-                print ("can ")
+                print ("Day la ba canh cua tam giac can ")
         else: 
-            print ("thuong ")  
+            print ("Day la tam giac thuong ")  
     else:
         print ("Day khong phai la ba canh cua tam giac ")
 
 def cau2(n):
     i=1
     sum=0
-    while i<=n:
+    while i<n:
         sum=sum + i
         i+=1
     print(sum)
@@ -27,32 +27,32 @@ def cau2(n):
 def cau3(n):
     i=1
     sum=0
-    while i<=n:
-        sum= sum + i**2
+    while i<n:
+        sum=sum + i**2
         i+=1
     print(sum)
 
 def cau4(n):
     i=1
     sum=0
-    while i <= n:
-        sum = sum + 1/i
-        i += 1
+    while i<=n:
+        sum=sum + 1/i
+        i+=1
     print(sum)
 
 def cau5(n):
     i=1
     sum=0
-    while i <= n:
-        sum = sum + 1/(2*i)
-        i += 1
+    while i<=n:
+        sum=sum + 1/(2*i)
+        i+=1
     print(sum)
 
 def cau6(n):
-    i=0
+    i=1
     sum=0
-    while i <= (n+1):
-        sum=sum + 1/(2*i + 1)
+    while i<=(n+1):
+        sum=sum + 1/(2*i - 1)
         i+=1
     print(sum)
 
@@ -61,6 +61,14 @@ def cau7(n,x):
     sum=0
     while i<=n:
         sum=sum + 1/(i*x**(i+1))
+        i+=1
+    print(sum)
+
+def cau8(n):
+    i=1
+    sum=0
+    while i<=n:
+        sum=sum + i/(i+1)
         i+=1
     print(sum)
 
@@ -89,7 +97,12 @@ def cau10(n):
     print(pro)
 
 def cauvar(n,x):
-    print(x**n)
+    i=1
+    pro=1
+    while i<=n:
+        pro*=x
+        i+=1
+    print(pro)
 
 def cau12(n):
     i=1
@@ -103,39 +116,46 @@ def cau12(n):
     print(sum)
 
 def cau13(x,n):
-    sum = 0
+    a=x
+    sum=0
     for i in range(1,n+1):
-        sum += x**i
+        x=a**i
+        sum+=x
     print(sum)
 
 def cau14(x,n):
-    sum = 0
+    a=x
+    sum=0
     for i in range(1,n+1):
-        pro = 1
-        for j in range(1, i+1):
+        x=a**i
+        pro=1
+        for j in range(1,i+1):
             pro*=j
-        sum += (x**i)/pro
+        sum+=(x/pro)
     print(sum)
-        
 
 def cau15(x,n):
+    a=x
     sum=1
     for i in range(1,2*n+1):
         if i%2==0:
+            x=a**i
             pro=1
             for j in range(1,i+1):
                 pro*=j
-            sum+=(x**i/pro)
+            sum+=(x/pro)
     print(sum)
 
 def cau16(x,n):
+    a=x
     sum=1
     for i in range(1,2*n+1):
         if i%2==1:
+            x=a**i
             pro=1
             for j in range(1,i+1):
                 pro*=j
-            sum+=(x**i/pro)
+            sum+=(x/pro)
     print(sum)
 
 def cau17(n):
@@ -144,7 +164,7 @@ def cau17(n):
     while count < n:
         res += res**(1/2)
         count += 1
-    print(res**2)
+    print(res)
 
 def cau18(n):
     pow=2
@@ -176,13 +196,16 @@ def cau20(n):
 def cau21(x,n):
     ans=0
     for i in range(1,n+1):
-         ans=(ans+x**i)**(1/2)
+        temp=1
+        for _ in range(1,i+1):
+            temp*=x
+        ans=(ans+temp)**(1/2)
     print(ans)
 
 def cau22(n):
     ans=1
     for _ in range(1,n+1):
-        ans=1/(1+ans)
+        ans = 1/(1+ans)
     print(ans)
 
 def cau23(x,n):
@@ -194,12 +217,12 @@ def cau23(x,n):
 def cau24(x,n):
     sum=0
     for i in range(1,n+1):
-        sum+=((-1)**(i))*x**(2*i)
+        sum+=((-1)**(i))*(x**(2*i))
     print(sum)
 
 def cau25(x,n):
     sum=0
-    for i in range(1,n+1):
+    for i in range(n):
         sum+=((-1)**(i))*x**(2*i+1)
     print(sum)
 
@@ -209,7 +232,7 @@ def cau26(n):
         temp=0
         for j in range(1,i+1):
             temp+=j
-        sum+=(-1)**(i)*1/(temp)
+        sum+=(-1)**(i+1)*(1/(temp))
     print(sum)
 
 def cau27(x,n):
@@ -222,20 +245,17 @@ def cau27(x,n):
     print(sum)
         
 def cau28(n):
-    k=int((-1 + (1 + 8 * n)**(1/2)) / 2)
-    print(k)
+    print(int((-1 + (1 + 8 * n)**(1/2)) / 2))
 
 def cau29(a,b,c):
-    max=max(a, b, c)
-    min=min(a, b, c)
-    print(max)
-    print(min)
+    print(max(a, b, c))
+    print(min(a, b, c))
 
 def cau30(a,b):
-    if (a > 0 and b > 0) or (a < 0 and b < 0):
-        print("2 n cung dau")
+    if a*b >= 0:
+        print("cùng dấu")
     else:
-        print("2 n khac dau") 
+        print("khác dấu") 
 
 def cau31(a,b):
     while b:
@@ -250,8 +270,9 @@ def cau32(a,b):
 
 def cau33(a,b):
     for i in range(a,b+1):
-        if isinstance(i**(1/2)):
+        if (i**(1/2)).is_integer():
             print(i, end=" ")
+
 
 def cau34(n):
     sum = 0
@@ -261,7 +282,7 @@ def cau34(n):
     print(sum)
 
 def cau35(n):
-    pro = 0
+    pro = 1
     for i in range(1, n + 1):
         if n % i == 0:
             pro *= i
@@ -275,52 +296,37 @@ def cau36(n):
             count += 1
             div.append(i)
     print(count)
-    for i in div:
-        print(i, end=" ")
+    print(*div, end=" ")
 
 def cau37(n):
-    count = 0
     div = []
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==1:
-            count += 1
+        if n%i == 0 and i%2==1:
             div.append(i)
-    print(count)
-    for i in div:
-        print(i, end=" ")
+    print(*div, end=" ")
 
 def cau38(n):
-    count = 0
-    div = []
+    sum = 0
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==0:
-            count += 1
-            div.append(i)
-    print(count)
-    for i in div:
-        print(i, end=" ")
+        if n%i == 0 and i%2==0:
+            sum += i
+    print(sum)
 
 def cau39(n):
-    count = 0
     pro=1
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==1:
-            count += 1
+        if n % i == 0 and i%2==1:
             pro*=i
-    print(count)
     print(pro)
+
 
 def cau40(n):
     count = 0
-    div = []
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==0:
+        if n % i == 0 and i%2==0:
             count += 1
-            div.append(i)
     print(count)
-    for i in div:
-        print(i, end=" ")
-
+    
 def cau41(n):
     max = 1
     for i in range(1, n + 1):
@@ -329,14 +335,15 @@ def cau41(n):
     print(max)
 
 def cau42(n):
-    max=0
-    for x in range(n-1, 1, -1):
-        if n % x == 0:
-            max=x
-    if max==n or max==1:
-        return -1
-    else:
+    max=1
+    for i in range(1, n):
+        if n%i == 0:
+            max = i
+    if max > 1:
         print(max)
+        return
+    print(-1)
+
 
 def cau43(a, b):
     for x in range(a, b + 1):
@@ -387,38 +394,36 @@ def cau47(h):
 
 def cau48(m,n):
     for _ in range(m):
-        for _ in range(n-1):
-            print("*",  end="")
-        print("*")
+        for _ in range(n):
+            print("*",end ="")
+        print("")
+            
     print("\n")
-
-    print("*"*m)
+    
+    print("*"*n)
     for _ in range(m-2):
-        print("*", end="")
+        print("*",end ="")
         for _ in range(n-2):
             print(" ",  end="")
         print("*")
-    print("*"*m)
-    print("\n")
+    print("*"*n)
+
+
 
 def cau49(n):
-    count = 0
     div = []
     for i in range(1, n + 1):
         if n % i == 0:
-            count += 1
             div.append(i)
-    for i in div:
-        print(i, end=" ")
+    print(*div, end=" ")
 
 def cau50(n):
     count = 0
-    div = []
     for i in range(1, n + 1):
         if n % i == 0:
             count += 1
-            div.append(i)
     print(count)
+
 
 def cau51(n):
     for i in range(2,n-1):
