@@ -205,7 +205,7 @@ def cau21(x,n):
 def cau22(n):
     ans=1
     for _ in range(1,n+1):
-        ans=1/(1+ans)
+        ans = 1/(1+ans)
     print(ans)
 
 def cau23(x,n):
@@ -217,12 +217,12 @@ def cau23(x,n):
 def cau24(x,n):
     sum=0
     for i in range(1,n+1):
-        sum+=((-1)**(i))*x**(2*i)
+        sum+=((-1)**(i))*(x**(2*i))
     print(sum)
 
 def cau25(x,n):
     sum=0
-    for i in range(1,n+1):
+    for i in range(n):
         sum+=((-1)**(i))*x**(2*i+1)
     print(sum)
 
@@ -232,7 +232,7 @@ def cau26(n):
         temp=0
         for j in range(1,i+1):
             temp+=j
-        sum+=(-1)**(i)*1/(temp)
+        sum+=(-1)**(i+1)*(1/(temp))
     print(sum)
 
 def cau27(x,n):
@@ -245,20 +245,17 @@ def cau27(x,n):
     print(sum)
         
 def cau28(n):
-    k=int((-1 + (1 + 8 * n)**(1/2)) / 2)
-    print(k)
+    print(int((-1 + (1 + 8 * n)**(1/2)) / 2))
 
 def cau29(a,b,c):
-    max=max(a, b, c)
-    min=min(a, b, c)
-    print(max)
-    print(min)
+    print(max(a, b, c))
+    print(min(a, b, c))
 
 def cau30(a,b):
-    if (a > 0 and b > 0) or (a < 0 and b < 0):
-        print("2 n cung dau")
+    if a*b >= 0:
+        print("cùng dấu")
     else:
-        print("2 n khac dau") 
+        print("khác dấu") 
 
 def cau31(a,b):
     while b:
@@ -273,8 +270,9 @@ def cau32(a,b):
 
 def cau33(a,b):
     for i in range(a,b+1):
-        if isinstance(i**(1/2)):
+        if (i**(1/2)).is_integer():
             print(i, end=" ")
+
 
 def cau34(n):
     sum = 0
@@ -284,7 +282,7 @@ def cau34(n):
     print(sum)
 
 def cau35(n):
-    pro = 0
+    pro = 1
     for i in range(1, n + 1):
         if n % i == 0:
             pro *= i
@@ -298,52 +296,37 @@ def cau36(n):
             count += 1
             div.append(i)
     print(count)
-    for i in div:
-        print(i, end=" ")
+    print(*div, end=" ")
 
 def cau37(n):
-    count = 0
     div = []
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==1:
-            count += 1
+        if n%i == 0 and i%2==1:
             div.append(i)
-    print(count)
-    for i in div:
-        print(i, end=" ")
+    print(*div, end=" ")
 
 def cau38(n):
-    count = 0
-    div = []
+    sum = 0
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==0:
-            count += 1
-            div.append(i)
-    print(count)
-    for i in div:
-        print(i, end=" ")
+        if n%i == 0 and i%2==0:
+            sum += i
+    print(sum)
 
 def cau39(n):
-    count = 0
     pro=1
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==1:
-            count += 1
+        if n % i == 0 and i%2==1:
             pro*=i
-    print(count)
     print(pro)
+
 
 def cau40(n):
     count = 0
-    div = []
     for i in range(1, n + 1):
-        if n % i == 0 & i%2==0:
+        if n % i == 0 and i%2==0:
             count += 1
-            div.append(i)
     print(count)
-    for i in div:
-        print(i, end=" ")
-
+    
 def cau41(n):
     max = 1
     for i in range(1, n + 1):
@@ -352,14 +335,15 @@ def cau41(n):
     print(max)
 
 def cau42(n):
-    max=0
-    for x in range(n-1, 1, -1):
-        if n % x == 0:
-            max=x
-    if max==n or max==1:
-        return -1
-    else:
+    max=1
+    for i in range(1, n):
+        if n%i == 0:
+            max = i
+    if max > 1:
         print(max)
+        return
+    print(-1)
+
 
 def cau43(a, b):
     for x in range(a, b + 1):
@@ -410,38 +394,36 @@ def cau47(h):
 
 def cau48(m,n):
     for _ in range(m):
-        for _ in range(n-1):
-            print("*",  end="")
-        print("*")
+        for _ in range(n):
+            print("*",end ="")
+        print("")
+            
     print("\n")
-
-    print("*"*m)
+    
+    print("*"*n)
     for _ in range(m-2):
-        print("*", end="")
+        print("*",end ="")
         for _ in range(n-2):
             print(" ",  end="")
         print("*")
-    print("*"*m)
-    print("\n")
+    print("*"*n)
+
+
 
 def cau49(n):
-    count = 0
     div = []
     for i in range(1, n + 1):
         if n % i == 0:
-            count += 1
             div.append(i)
-    for i in div:
-        print(i, end=" ")
+    print(*div, end=" ")
 
 def cau50(n):
     count = 0
-    div = []
     for i in range(1, n + 1):
         if n % i == 0:
             count += 1
-            div.append(i)
     print(count)
+
 
 def cau51(n):
     for i in range(2,n-1):
