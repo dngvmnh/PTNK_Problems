@@ -89,6 +89,38 @@ def printF():
     print("F" + "F"*5 + "F")
     print("\n")
 
+def printG():
+    print(" "*8+"G"*13)
+    print(" "*5+"G"*3+":"*13+"G"*3)
+    print(" "*2+"G"*3+":"*19+"G"*3)
+    print(" "+"G"+":"*5+"G"*15+":"*5+"G")
+    for i in range(2):
+        print("G"+":"*5+"G"+" "*15+"G"+":"*5+"G")
+    print("G"+":"*5+"G"+" "*15+"G"+"G"*5+"G")
+    for i in range(3):
+        print("G"+":"*5+"G"+" "*7)
+    print("G"+":"*5+"G"+" "*15+"G"+"G"*5+"G")
+    for i in range(2):
+        print("G"+":"*5+"G"+" "*12+"G"*2+":"*9+"G"*2)
+    print("G"+":"*5+"G"+" "*15+"G"+":"*5+"G")
+    print(" "+"G"+":"*5+"G"*15+":"*6+"G")
+    print(" "*2+"G"*3+":"*23+"G")
+    print(" "*5+"G"*3+":"*13+"G"*2+":"*5+"G")
+    print(" "*8+"G"*13+" "+"G"*7)
+    print("\n")
+    
+def printH():
+    print("H"*7+" "*12+"H"*7)
+    for i in range(6):
+        print("H"+":"*5+"H"+" "*12+"H"+":"*5+"H")
+    print("H"+":"*5+"H"+"H"*12+"H"+":"*5+"H")
+    print("H"+":"*5+":"+":"*12+":"+":"*5+"H")
+    print("H"+":"*5+"H"+"H"*12+"H"+":"*5+"H")
+    for i in range(6):
+        print("H"+":"*5+"H"+" "*12+"H"+":"*5+"H")
+    print("H"*7+" "*12+"H"*7)
+    print("\n")
+
 def printR():
     print(" " + "R"*23 + " ")
     for i in range(6):
@@ -106,8 +138,8 @@ if __name__ == "__main__":
     printD()
     printE()
     printF()
-    # printG()
-    # printH()
+    printG()
+    printH()
     # printI()
     # printJ()
     # printK()
