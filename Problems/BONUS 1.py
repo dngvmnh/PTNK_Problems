@@ -14,62 +14,80 @@ def printA():
     print("\n")
 
 def printB():
-    print("B" + ":"*5 + "B"*11 + ":"*5 + "B")
-    for i in range(6):
+    print("B"*23)
+    print("B" + ":"*5 + ":"*12 + ":"*5 + "B")
+    print("B" + ":"*5 + "B"*12 + ":"*6 + "B")
+    for i in range(4):
         print("B" + ":"*5 + "B" + " "*11 + "B" + ":"*5 + "B")
-    print("B" + ":"*5 + "B"*11 + ":"*5 + "B")
-    for i in range(7):
+    print("B" + ":"*5 + "B"*12 + ":"*5 + "B")
+    print("B" + ":"*5 + ":"*11 + ":"*5 + "B")
+    print("B" + ":"*5 + "B"*12 + ":"*5 + "B")
+    for i in range(4):
         print("B" + ":"*5 + "B" + " "*11 + "B" + ":"*5 + "B")
-    print("B" + ":"*5 + "B"*11 + ":"*5 + "B")
+    print("B" + ":"*5 + "B"*12 + ":"*6 + "B")
+    print("B" + ":"*5 + ":"*12 + ":"*5 + "B")
+    print("B"*23)
+    print("\n")
+
+def printC():
+    print(" "*8+"C"*13)
+    print(" "*5+"C"*3+":"*13+"C"*3)
+    print(" "*2+"C"*3+":"*19+"C"*3)
+    print(" "+"C"+":"*5+"C"*15+":"*5+"C")
+    for i in range(2):
+        print("C"+":"*5+"C"+" "*15+"C"+":"*5+"C")
+    print("C"+":"*5+"C"+" "*15+"C"+"C"*5+"C")
+    for i in range(4):
+        print("C"+":"*5+"C")
+    print("C"+":"*5+"C"+" "*15+"C"+"C"*5+"C")
+    for i in range(2):
+        print("C"+":"*5+"C"+" "*15+"C"+":"*5+"C")
+    print(" "+"C"+":"*5+"C"*15+":"*5+"C")
+    print(" "*2+"C"*3+":"*19+"C"*3)
+    print(" "*5+"C"*3+":"*13+"C"*3)
+    print(" "*8+"C"*13)
     print("\n")
 
 def printD():
-    print("D" + ":"*5 + "D"*9 + ":"*5 + "D")
-    for i in range(14):
-        print("D" + ":"*5 + "D" + " " * 9 + "D" + ":"*5 + "D")
-    print("D" + ":"*5 + "D"*9 + ":"*5 + "D")
+    print("D"*23)
+    print("D" + ":"*5 + ":"*12 + ":"*5 + "D")
+    print("D" + ":"*5 + "D"*12 + ":"*6 + "D")
+    for i in range(10):
+        print("D" + ":"*5 + "D" + " " * 12 + "D" + ":"*5 + "D")
+    print("D" + ":"*5 + "D"*12 + ":"*6 + "D")
+    print("D" + ":"*5 + ":"*12 + ":"*5 + "D")
+    print("D"*23)
     print("\n")
 
 def printE():
-    print("E" + ":"*9 + "E")
-    for i in range(7):
-        print("E" + " " * 11 + "E")
-    print("E" + ":"*9 + "E")
-    for i in range(7):
-        print("E" + " " * 11 + "E")
-    print("E" + ":"*9 + "E")
+    print("E"*23)
+    print("E" + ":"*6+":"*9+":"*6+"E")
+    print("E" + ":"*5 + "E"+"E"*9+"E"+ "E"*5+"E")
+    for i in range(4):
+        print("E" + ":"*5 + "E")
+    print("E" + ":"*5 + "E"+"E"*9+"E"+ "E"*5+"E")
+    print("E" + ":"*6+":"*9+":"*6+"E")
+    print("E" + ":"*5 + "E"+"E"*9+"E"+ "E"*5+"E")
+    for i in range(4):
+        print("E" + ":"*5 + "E")
+    print("E" + ":"*5 + "E"+"E"*9+"E"+ "E"*5+"E")
+    print("E" + ":"*6+":"*9+":"*6+"E")
+    print("E"*23)
     print("\n")
 
 def printF():
-    print("F" + ":"*9 + "F")
-    for i in range(7):
-        print("F" + " " * 11 + "F")
-    print("F" + ":"*9 + "F")
+    print("F"*23)
+    print("F" + ":"*6 + ":"*9 + ":"*6 + "F")
+    print("F" + ":"*5 + "F" + "F"*9 + "F" + "F"*5 + "F")
+    for i in range(4):
+        print("F" + ":"*5 + "F")
+    print("F" + ":"*5 + "F" + "F"*9 + "F" + "F"*5 + "F")
+    print("F" + ":"*6 + ":"*9 + ":"*6 + "F")
+    print("F" + ":"*5 + "F" + "F"*9 + "F" + "F"*5 + "F")
     for i in range(6):
-        print("F" + " " * 11 + "F")
-    print("F" + " " * 11 + "F")
+        print("F" + ":"*5 + "F")
+    print("F" + "F"*5 + "F")
     print("\n")
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def printR():
     print(" " + "R"*23 + " ")
@@ -78,13 +96,14 @@ def printR():
     print("R" + ":"*5 + "R" + " "*3 + " " + " "*3 + "R" + ":"*5 + "R")
     for i in range(7):
         print("R" + ":"*5 + "R" + " "*(2*i+1) + "R" + ":"*5 + "R")
+    print("R"*7+" "*13+"R"*7)
     print("\n")
     
 if __name__ == "__main__":
-    # printA()
-    # printB()
-    # printC()
-    # printD()
+    printA()
+    printB()
+    printC()
+    printD()
     printE()
     printF()
     # printG()
@@ -98,7 +117,7 @@ if __name__ == "__main__":
     # printO()
     # printP()
     # printQ()
-    # printR()
+    printR()
     # printS()
     # printT()
     # printU()
