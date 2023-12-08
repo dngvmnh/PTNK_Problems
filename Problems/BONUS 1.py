@@ -122,8 +122,8 @@ def printH():
     print("\n")
 
 def printR():
-    print(" " + "R"*23 + " ")
-    for i in range(6):
+    print("R"*25)
+    for i in range(5):
         print("R" + ":"*5 + "R" + " "*11 + "R" + ":"*5 + "R")
     print("R" + ":"*5 + "R" + " "*3 + " " + " "*3 + "R" + ":"*5 + "R")
     for i in range(7):
