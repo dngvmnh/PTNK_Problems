@@ -121,6 +121,60 @@ def printH():
     print("H"*7+" "*12+"H"*7)
     print("\n")
 
+def printI():
+    print("I"*22)
+    print("I" + ":"*6 + ":"*8 + ":"*6 + "I")
+    print("I"*8 + ":"*5 + "I" + "I"*8)
+    for i in range(8):
+        print(" "*8+"I" + ":"*5 + "I")
+    print("I"*8 + ":"*5 + "I" + "I"*8)
+    print("I" + ":"*6 + ":"*8 + ":"*6 + "I")
+    print("I"*22)
+    print("\n")
+
+def printJ():
+    print("J"*22)
+    print("J" + ":"*6 + ":"*8 + ":"*6 + "J")
+    print("J"*8 + ":"*5 + "J" + "J"*8)
+    for i in range(8):
+        print(" "*8+"J" + ":"*5 + "J")
+    print("J"*8 + ":"*5 + "J")
+    print("J" + ":"*6 + ":"*5 +"J")
+    print("J"*12)
+    print("\n")
+
+def printK():
+    print("K"*7+" "*13+"K"*7)
+    for i in range(6,0,-1):
+        print("K" + ":"*5 + "K" + " "*(2*i+1) + "K" + ":"*5 + "K")
+    print("K" + ":"*5 + "K" + " " + "K" + ":"*5 + "K")
+    for i in range(7):
+        print("K" + ":"*5 + "K" + " "*(2*i+1) + "K" + ":"*5 + "K")
+    print("K"*7+" "*13+"K"*7)
+    print("\n")
+
+def printL():
+    print("L"*7)
+    for i in range(10):
+        print("L" + ":"*5 + "L")
+    print("L" + ":"*5 + "L" + "L"*9 + "L" + "L"*5 + "L")
+    print("L" + ":"*6 + ":"*9 + ":"*6 + "L")
+    print("L" + "L"*5 + "L" + "L"*9 + "L" + "L"*5 + "L")
+    print("\n")
+
+def printM():
+    print("M"*7+" "*15+"M"*7)
+    for i in range(6):
+        print("M"+":"*(5+i)+"M"+" "*(15-2*i)+"M"+":"*(5+i)+"M")
+    print("M"+":"*(5)+"M"+":"*5+"M"*4+" "*(15-2*8)+"M"+":"*5+"M"+":"*5+"M")
+    for i in range(2,7):
+        print("M"+":"*5+"M"+" "*(i-2)+"M"+":"*(17-2*i)+"M"+" "*(i-2)+"M"+":"*5+"M")
+    print("M"+"M"*(5)+"M"+" "*5+"M"*4+" "*(15-2*8)+"M"+" "*5+"M"+"M"*5+"M")
+
+
+
+    print("\n")
+
 def printR():
     print("R"*25)
     for i in range(5):
@@ -140,16 +194,16 @@ if __name__ == "__main__":
     printF()
     printG()
     printH()
-    # printI()
-    # printJ()
-    # printK()
-    # printL()
-    # printM()
+    printI()
+    printJ()
+    printK()
+    printL()
+    printM()
     # printN()
     # printO()
     # printP()
     # printQ()
-    printR()
+    # printR()
     # printS()
     # printT()
     # printU()
