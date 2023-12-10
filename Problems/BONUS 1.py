@@ -243,6 +243,91 @@ def printR():
     print("R"*7+" "*13+"R"*7)
     print("\n")
     
+def printS():
+    print(" "*7+"S"*9)
+    print(" "*4+"S"*3+":"*9+"S"*3)
+    print(" "+"S"*3+":"*15+"S"*3)
+    print("S"+":"*6+"S"+"S"*7+"S"+":"*6+"S")
+    for i in range(2):
+        print("S"+":"*5+"S"+" "*9+"S"+":"*5+"S")
+    print("S"+":"*5+"S"+" "*9+"S"+"S"*5+"S")
+    for i in range(9):
+        print(" "*(2*i)+"S"+":"*5+"S")
+    print("S"+"S"*5+"S"+" "*9+"S"+":"*5+"S")
+    for i in range(2):
+        print("S"+":"*5+"S"+" "*9+"S"+":"*5+"S")
+    print("S"+":"*6+"S"+"S"*7+"S"+":"*6+"S")
+    print(" "+"S"*3+":"*15+"S"*3)
+    print(" "*4+"S"*3+":"*9+"S"*3)
+    print(" "*7+"S"*9)
+    print("\n")
+
+def printT():
+    print("T"*24)
+    print("T"+":"*22+"T")
+    print("T"*9+":"*6+"T"*9)
+    for i in range(10):
+        print(" "*8 + "T" + ":"*6 + "T")
+    print(" "*8+"T"*8)
+    print("\n")
+
+
+def printU():
+    print("U"*7 + " " *12 + "U"*7)
+    for i in range(10):
+        print("U" + ":"*5 + "U" + " " * 12 + "U" + ":"*5 + "U")
+    print("U" + ":"*5 + "U" + "U" * 12 + "U" + ":"*5 + "U")
+    print("U" + ":"*5 + "U" + ":" * 12 + "U" + ":"*5 + "U")
+    print("U" + "U"*5 + "U" + "U" * 12 + "U" + "U"*5 + "U")
+    print("\n")
+
+def printV():
+    print("V"*7+" "*16+"V"*7)
+    for i in range (9):
+        print(" "*i+"V"+":"*5+"V"+" "*(16-i*2)+"V"+":"*5+"V")
+    for i in range(4):
+        print(" "*(9+i)+"V"+":"*(10-2*i)+"V")
+    print(" "*12+"V"*6)
+    print("\n")
+
+def printW():
+    print("W"*7 + " " * 10 + "W"*14+ " " * 10 + "W"*7)
+    for i in range(6):
+        print(" "*i+ "W" + ":"*5 + "W" + " " * (10-2*i) + "W" + ":"*5 + "W"+" "*2*i+ "W" + ":"*5 + "W" + " " * (10-2*i) + "W" + ":"*5 + "W")
+    print(" "*5+"W"*14+" "*10+"W"*14)
+    print("\n")
+
+def printX():
+    print("X"*7 + " " * 10 + "X"*7)
+    for i in range(6):
+        print(" "*i+ "X" + ":"*5 + "X" + " " * (10-2*i) + "X" + ":"*5 + "X")
+    for i in range(5):
+        print(" "*(5-i)+"X"+":"*5+"X"+" "*2*i+"X"+":"*5+"X")
+    print("X"*7 + " " * 10 + "X"*7)
+    print("\n")
+
+def printY():
+    print("Y"*7 + " " * 16 + "Y"*7)
+    for i in range (9):
+        print(" "*i + "Y" + ":"*5 + "Y" + " " * (16-i*2) + "Y" + ":"*5 + "Y")
+    for i in range(4):
+        print(" "*(9+i)+"Y"+":"*(10-2*i)+"Y")
+    for i in range(6):
+        print(" "*12+"Y"+":"*4+"Y")
+    print(" "*12+"Y"*6)
+    print("\n")
+
+def printZ():
+    print("Z"*30)
+    print("Z"+":"*28+"Z")
+    print("Z"+":"*5+"Z"*24)
+    for i in range(12):
+        print(" "*(i*2)+"Z"+":"*5+"Z")
+    print("Z"+"Z"*5+"Z"*18+":"*5+"Z")
+    print("Z"+":"*28+"Z")
+    print("Z"*30)
+    print("\n")
+
 if __name__ == "__main__":
     printA()
     printB()
@@ -262,11 +347,11 @@ if __name__ == "__main__":
     printP()
     printQ()
     printR()
-    # printS()
-    # printT()
-    # printU()
-    # printV()
-    # printW()
-    # printX()
-    # printY()
-    # printZ()
+    printS()
+    printT()
+    printU()
+    printV()
+    printW()
+    printX()
+    printY()
+    printZ()
