@@ -170,13 +170,71 @@ def printM():
     for i in range(2,7):
         print("M"+":"*5+"M"+" "*(i-2)+"M"+":"*(17-2*i)+"M"+" "*(i-2)+"M"+":"*5+"M")
     print("M"+"M"*(5)+"M"+" "*5+"M"*4+" "*(15-2*8)+"M"+" "*5+"M"+"M"*5+"M")
-
-
-
     print("\n")
+
+def printN():
+    print("N"*7+" "*15+"N"*7)
+    for i in range(7):
+        print("N"+":"*(5+i)+"N"+" "*(15-i)+"N"+":"*5+"N")
+    for i in range(9):
+        print("N"+":"*(5)+"N"+" "*i+"N"+":"*5+"N"+" "*(8-i)+"N"+":"*5+"N")
+    print("N"*7+" "*8+"N"*14)
+    print("\n")
+
+def printO():
+    print(" "*12+"O"*5)
+    for i in range(2):
+        print(" "*(10-2*i)+"O"*2+":"*(5+4*i)+"O"*2)
+    print(" "*(10-2*2)+"O"*2+":"*5+"O"*3+":"*5+"O"*2)
+    for i in range(3):
+        print(" "*(4-2*i)+"O"*2+":"*(5)+"O"*2+" "*(3+i*4)+"O"*2+":"*(5)+"O"*2)
+    for i in range(2):
+        print("O"*2+":"*5+"O"*2+" "*11+"O"*2+":"*5+"O"*2)
+    for i in range(3):
+        print(" "*(2*i)+"O"*2+":"*(5)+"O"*2+" "*(11-i*4)+"O"*2+":"*(5)+"O"*2)
+    print(" "*(10-2*2)+"O"*2+":"*5+"O"*3+":"*5+"O"*2)
+    for i in range(2):
+        print(" "*(8+2*i)+"O"*2+":"*(9-4*i)+"O"*2)
+    print(" "*12+"O"*5)
+    print("\n")
+
+def printP():
+    print("P"*23)
+    print("P"+":"*21+"P")
+    print("P"+":"*5+"P"+"P"*9+"P"+":"*5+"P")
+    for i in range(2):
+        print("P" + ":"*5 + "P" + " "*(9) + "P" + ":"*5 + "P")
+    for i in range(5):
+        print("P" + ":"*5 + "P" + " "*(9-2*i) + "P" + ":"*5 + "P")
+    for i in range(3):
+        print("P"+":"*(10-2*i)+"P")
+    for i in range(5):
+        print("P"+":"*5+"P")
+    print("P"*7)
+    print("\n")
+
+def printQ():
+    print(" "*12+"Q"*5)
+    for i in range(2):
+        print(" "*(10-2*i)+"Q"*2+":"*(5+4*i)+"Q"*2)
+    print(" "*(10-2*2)+"Q"*2+":"*5+"Q"*3+":"*5+"Q"*2)
+    for i in range(3):
+        print(" "*(4-2*i)+"Q"*2+":"*(5)+"Q"*2+" "*(3+i*4)+"Q"*2+":"*(5)+"Q"*2)
+    for i in range(2):
+        print("Q"*2+":"*5+"Q"*2+" "*11+"Q"*2+":"*5+"Q"*2)
+    for i in range(3):
+        print(" "*(2*i)+"Q"*2+":"*(5)+"Q"*2+" "*(11-i*4)+"Q"*2+":"*(5)+"Q"*2)
+    print(" "*(10-2*2)+"Q"*2+":"*5+"Q"*3+":"*5+"Q"*2+":"*2+"Q"*2)
+    for i in range(2):
+        print(" "*(8+2*i)+"Q"*2+":"*(9-4*i)+"Q"*2+" "*2*(2*i+1)+"Q"*2+":"*2+"Q"*2)
+    print(" "*12+"Q"*5+" "*10+"Q"*6)
+    print("\n")
+
 
 def printR():
     print("R"*25)
+    print("R"+":"*23+"R")
+    print("R"+":"*5+"R"+"R"*11+"R"+":"*5+"R")
     for i in range(5):
         print("R" + ":"*5 + "R" + " "*11 + "R" + ":"*5 + "R")
     print("R" + ":"*5 + "R" + " "*3 + " " + " "*3 + "R" + ":"*5 + "R")
@@ -199,11 +257,11 @@ if __name__ == "__main__":
     printK()
     printL()
     printM()
-    # printN()
-    # printO()
-    # printP()
-    # printQ()
-    # printR()
+    printN()
+    printO()
+    printP()
+    printQ()
+    printR()
     # printS()
     # printT()
     # printU()
